@@ -1,0 +1,56 @@
+.RocketInfo {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  max-height: 70%;
+  height: 100%;
+  width: 80%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.specs {
+  border-radius: 10px;
+  background-color: rgb(29, 29, 29);
+  padding: 1rem;
+  width: 60%;
+}
+
+.navigation {
+  justify-self: flex-end;
+  align-self: center;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__button {
+    font-size: 5rem;
+    cursor: pointer;
+    margin: 0 1rem 0 1rem;
+  }
+
+  &__ball {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: rgb(107, 107, 107);
+    margin: 0.4rem;
+    transition: all 0.5s;
+
+    &_active {
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background-color: rgb(235, 235, 235);
+      margin: 0.4rem;
+      transition: all 0.5s;
+    }
+  }
+}
+
+.imgButton {
+  font-size: 5rem;
+  color: white;
+}

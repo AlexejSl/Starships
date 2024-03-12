@@ -1,0 +1,58 @@
+.globe_container {
+  position: fixed;
+  bottom: 0;
+  transform: translateY(92%);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe {
+  position: relative;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 50%;
+  border: 3px dashed #eeeeee;
+  font-size: 3rem;
+  transition: transform 0.5s ease-out;
+
+  &__item_1 {
+    position: absolute;
+    top: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+
+  &__item_2 {
+    position: absolute;
+    top: 50%;
+    left: 103%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    white-space: nowrap;
+  }
+
+  &__item_3 {
+    position: absolute;
+    top: 103%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    white-space: nowrap;
+  }
+
+  &__item_4 {
+    position: absolute;
+    top: 50%;
+    left: -3%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    white-space: nowrap;
+  }
+}
+
+.button {
+  top: 0;
+  position: absolute;
+  color: black;
+}
