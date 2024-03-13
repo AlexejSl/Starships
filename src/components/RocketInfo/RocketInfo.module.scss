@@ -1,4 +1,6 @@
-.RocketInfo {
+@import '../../breakpoints.scss';
+
+.rocketInfo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -55%);
@@ -8,6 +10,31 @@
   position: absolute;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: $bp-large) {
+    top: 36%;
+  }
+
+  &__innerFlex {
+    margin: 5rem;
+    max-width: 42%;
+
+    @media only screen and (max-width: $bp-large) {
+      max-width: 46%;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+      max-width: 55%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      max-width: 70%;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      max-width: 90%;
+    }
+  }
 }
 
 .specs {
@@ -15,6 +42,10 @@
   background-color: rgb(29, 29, 29);
   padding: 1rem;
   width: 60%;
+
+  @media only screen and (max-width: $bp-largest) {
+    width: 100%;
+  }
 }
 
 .navigation {
@@ -29,6 +60,7 @@
     font-size: 5rem;
     cursor: pointer;
     margin: 0 1rem 0 1rem;
+    z-index: 1;
   }
 
   &__ball {
@@ -47,6 +79,15 @@
       margin: 0.4rem;
       transition: all 0.5s;
     }
+  }
+}
+
+.imageGallery {
+  height: 40rem;
+  width: auto;
+
+  @media only screen and (max-width: $bp-largest) {
+    height: 30rem;
   }
 }
 

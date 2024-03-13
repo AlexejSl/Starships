@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useStarshipContext } from '../../store/StarshipContext';
 import styles from './Globe.module.scss';
+import { Link } from '@mui/material';
 
 function Globe() {
   const { starships, currentStarship } = useStarshipContext();
@@ -23,9 +24,14 @@ function Globe() {
           {starships.map((starship, index) => {
             const className = `globe__item_${index + 1}`;
             return (
-              <div className={styles[className]} key={starship.name}>
-                {starship.name}
-              </div>
+              <Link
+                href={starship.wikipedia}
+                underline="none"
+                sx={{ textDecoration: 'none', color: 'inherit' }}
+                key={starship.name}
+              >
+                <div className={styles[className]}>{starship.name}</div>
+              </Link>
             );
           })}
         </div>

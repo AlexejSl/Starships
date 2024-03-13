@@ -4,16 +4,19 @@ import {
   MdOutlineKeyboardArrowRight,
   MdOutlineKeyboardArrowLeft,
 } from 'react-icons/md';
+
 import PropTypes from 'prop-types';
 import styles from './RocketInfo.module.scss';
 
 function ImageGallery({ images, currentStarship }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  //update current image index to 0 so when another starship is selected it shows its first photo
   useEffect(() => {
     setCurrentImageIndex(0);
   }, [currentStarship]);
 
+  //image loops on click
   const handleNextClick = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
@@ -28,9 +31,9 @@ function ImageGallery({ images, currentStarship }) {
     <Card sx={{ position: 'relative' }}>
       <CardMedia
         component="img"
-        height="400"
         image={images[currentImageIndex]}
         alt="Image"
+        className={styles.imageGallery}
       />
       <div>
         <Button

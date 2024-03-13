@@ -6,10 +6,10 @@ const StarshipContext = createContext();
 export const StarshipProvider = ({ children }) => {
   const [starships, setStarships] = useState(null);
   const [currentStarship, setCurrentStarship] = useState(0);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
+  //fetch data from api
   useEffect(() => {
-    setIsLoading(true);
     const fetchStarships = async () => {
       try {
         const response = await fetch('https://api.spacexdata.com/v4/rockets');
